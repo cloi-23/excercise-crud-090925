@@ -33,13 +33,14 @@ cd simple-crud
 ```
 
 # Backend
-
+```bash
 cd backend-server
 npm install
 npm run start:dev
-
+```
 # Frontend
-
+```bash
 cd ../web-client
 npm install
 npm run start
+```

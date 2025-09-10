@@ -13,6 +13,7 @@ const AddEmployeeModal = ({ isOpen, onClose, onSubmit, initialData }: any) => {
     contactNumber: initialData?.contactNumber || "",
     photo: null,
   });
+
   const [preview, setPreview] = useState<string | null>(
     initialData?.photo
       ? `${backendUrl}/employees/${initialData._id}/photo`

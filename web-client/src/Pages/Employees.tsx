@@ -123,6 +123,7 @@ function Employees() {
             <th className="border border-gray-300 px-4 py-2">Username</th>
             <th className="border border-gray-300 px-4 py-2">Country</th>
             <th className="border border-gray-300 px-4 py-2">Email</th>
+            <th className="border border-gray-300 px-4 py-2">Account Type</th>
             <th className="border border-gray-300 px-4 py-2">Actions</th>
           </tr>
         </thead>
@@ -134,10 +135,12 @@ function Employees() {
                   <img
                     src={`${backendUrl}/employees/${emp._id}/photo`}
                     alt={emp.username}
-                    className="w-12 h-12 rounded-full mx-auto"
+                    className="w-12 h-12 rounded-md mx-auto"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-gray-200 mx-auto" />
+                  <div className="w-12 h-12 rounded-md bg-gray-200 mx-auto text-gray-600 items-center flex justify-center">
+                    N/A
+                  </div>
                 )}
               </td>
               <td className="border border-gray-300 px-4 py-2">
@@ -150,6 +153,9 @@ function Employees() {
                 {emp.country}
               </td>
               <td className="border border-gray-300 px-4 py-2">{emp.email}</td>
+              <td className="border border-gray-300 px-4 py-2">
+                {emp.accountType}
+              </td>
               <td className="border border-gray-300 px-4 py-2 text-center">
                 <button
                   onClick={() => setEditEmployee(emp)}
